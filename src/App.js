@@ -73,15 +73,9 @@ class App extends Component {
 				}
 				service.location = JSON.stringify(location);
 
-				const schedule = {};
-				if (data.Open) {
-					schedule.open = data.Open;
+				if (data.Schedule) {
+					service.schedule = data.Schedule;
 				}
-
-				if (data.Close) {
-					schedule.close = data.Close;
-				}
-				service.schedule = JSON.stringify(schedule);
 
 				if (data.Phone) service.phone = data.Phone;
 				if (data.Email) service.email = data.Email;
